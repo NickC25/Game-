@@ -1,0 +1,79 @@
+puts "welcome the the forest"
+puts "you walk into the woods and are looking for animals."
+puts "Do you want to look for big animals or little animals?"
+option = gets.chomp
+
+if option ==  "big animals"
+  	puts "You find a bear!  Do you: run away, attack the bear, or follow the bear"
+    animal_option = gets.chomp
+   case animal_option
+   when "run away"
+      puts "ok.  You ran away.  What do you do next: Leave the woods, or keep going?"
+      next_option = gets.chomp
+
+      case next_option
+      when "leave"
+        puts "Good idea"
+      when "keep going"
+        puts "ok, you've kept going.  Still on edge after your close encounter with the bear, you don't watch where you are going, and you walk off a cliff"
+      else
+        puts "whatever"
+      end
+
+    when "attack the bear"
+      puts "Do you REALLY want to attack the bear?  (Yes or No)"
+      attack_option = gets.chomp
+
+      case attack_option
+      when "yes"
+        puts "You've just punched a bear. Agitated, the bear returns the favor, which kills you instatnly."
+      when "no"
+        puts "Good use of judgement.  You run away and escape the forest.  Come back again soon!"
+      else
+        puts "whatever"
+      end
+
+    when "follow the bear"
+      puts "you follow the bear to his house!  Do you enter?  (yes/no)"
+      option = gets.chomp
+      case option
+      when "yes"
+        puts "A stranger just entered his house unannounced.  The bear cites homestead laws, and shoots you!"
+      when "no"
+        puts "he sees you sneaking around his house!  He comes outside and mauls you!  Serves you right for scaring him! "
+      else
+        puts "whatever"
+      end
+
+    else
+        puts "other whatever"
+    end
+
+elsif option ==  "little animals"
+    puts "you find a baby doe.  What do you do: follow the doe, attack the doe, or run away"
+    option = gets.chomp
+    case option
+    when "follow the doe"
+      puts "you find a pack of deer.  Do you run away, or make contact"
+      second_option = gets.chomp
+
+      case second_option
+      when "run away"
+          puts "smart choice."
+      when "make contact"
+          puts "a hunter appears!  He mistakes you for a deer, and shoots you!"
+      else
+        puts "whatever"
+      end
+
+    when "run away"
+      puts "smart choice."
+    when "attack the doe"
+      puts "there's a law against hunting deer out of season.  A park ranger sees you and arrests you"
+    else
+      puts "whatever"
+    end
+
+else
+  puts "That's not an input"
+end
